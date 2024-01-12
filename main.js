@@ -11,6 +11,7 @@ function startGame() {
 	playerTurn();
 }
 function playerTurn() {
+	determineWinner();
 	for (let i = 0; i < grids.length;i++) {
         grids[i].addEventListener("click", function() {
 			if (grids[i].textContent == 'O' || grids[i].textContent == 'o') {	
@@ -42,4 +43,14 @@ function cpuTurn() {
 }
 function handleOpenSlots() {
 	//move all stuff of retrieving open grids to here, not inside the other 2 functions
+	
+}
+function determineWinner() {
+	if (grids[0].textContent == 'X' && grids[1].textContent == 'X' && grids[2].textContent =='X') {
+		alert("player wins");
+	} else if (grids[3].textContent == 'X' && grids[4].textContent == 'X' && grids[5].textContent =='X') {
+		alert("player wins");
+	} else if (grids[6].textContent == 'X' && grids[7].textContent == 'X' && grids[8].textContent =='X') {
+		alert("player wins");
+	}
 }
